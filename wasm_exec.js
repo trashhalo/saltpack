@@ -19,8 +19,8 @@ const global = {
       crypto.randomFillSync(b);
     },
   },
-  TextEncoder: util.TextEncoder,
-  TextDecoder: util.TextDecoder,
+  TextEncoder: util.TextEncoder || globalThis.TextEncoder,
+  TextDecoder: util.TextDecoder || globalThis.TextDecoder,
   performance: {
     now() {
       const [sec, nsec] = process.hrtime();
