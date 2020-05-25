@@ -1,0 +1,19 @@
+{
+  "name": "saltpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browser": "lib.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "GOOS=js GOARCH=wasm go build -o lib.wasm",
+    "test": "mocha"
+  },
+  "author": "Stephen Solka",
+  "license": "BSD",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0"
+  }
+}
