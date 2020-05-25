@@ -25,8 +25,8 @@ const global = {
     now() {
       const [sec, nsec] = process.hrtime();
       return sec * 1000 + nsec / 1000000;
-    }
-  }
+    },
+  },
 };
 
 const enosys = () => {
